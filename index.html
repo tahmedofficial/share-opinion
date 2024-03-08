@@ -32,16 +32,98 @@
 
 <body>
 
-    <header>
+    <header class="container mx-auto">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+                </div>
+                <div class="flex-none gap-2">
+                    <div>
+                        <button class="btn btn-circle tooltip">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span class="tooltiptext">Home</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-circle tooltip">
+                            <i class="fa-solid fa-pen"></i>
+                            <span class="tooltiptext">Edit</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-circle tooltip">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="tooltiptext">Add</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-circle tooltip">
+                            <i class="fa-solid fa-flag"></i>
+                            <span class="tooltiptext">Flag</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn text-white rounded-full text-lg px-6 bg-[#797DFC]">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- header section -->
+        <section class="mt-5 lg:mt-10">
+            <div class="hero bg-primary_background_color rounded-3xl bg-[url('images/bgbanner.png')] p-10 lg:p-32">
 
+                <div class="w-full flex gap-8 lg:gap-28 flex-col lg:flex-row">
+
+                    <div class="w-full">
+                        <h1 class="md:mb-5 text-3xl md:text-5xl lg:text-7xl font-extrabold text-white">Welcome to
+                            the</h1>
+                        <h1 class="mb-5 text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary_color">
+                            <span class="text_greadent">ReTro</span> <span class="text-white">Forum</span>
+                        </h1>
+                        <p class="mb-5 text-white text-sm md:text-xl">Share your favorite opinion and win and wp
+                            forum coffee mug!</p>
+                        <div id="input_field">
+                            <label class="input flex text-black border-0 h-12 pr-1 rounded-full">
+                                <input id="search_value" type="text" class="grow" placeholder="Search here anything" />
+                                <button onclick="searchButton()"
+                                    class=" hover:bg-sky-700 h-10 px-8 text-white bg-primary_button_color my-auto rounded-full">Search</button>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white py-8 px-16 lg:py-10 lg:px-32 rounded-3xl w-full flex flex-col gap-2 justify-around">
+                        <div class="text-[#12132D] text-lg lg:text-2xl flex justify-between">
+                            <p>Registered Users</p>
+                            <p>01</p>
+                        </div>
+                        <div class="text-[#12132D] text-lg lg:text-2xl flex justify-between">
+                            <p>Forum</p>
+                            <p>05</p>
+                        </div>
+                        <div class="text-[#12132D] text-lg lg:text-2xl flex justify-between">
+                            <p>Topics</p>
+                            <p>01</p>
+                        </div>
+                        <div class="text-[#12132D] text-lg lg:text-2xl flex justify-between">
+                            <p>Replies</p>
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
     </header>
 
-    <main>
+    <main class="container mx-auto">
 
     </main>
 
     <footer>
-        
+
     </footer>
 
     <script src="script/index.js"></script>
