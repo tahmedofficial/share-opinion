@@ -1,5 +1,3 @@
-
-
 /* tooltip */
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -15,4 +13,11 @@
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+.text_greadent {
+    background: linear-gradient(to right, #797DFC,
+            #797dfc4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
