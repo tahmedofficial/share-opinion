@@ -120,12 +120,48 @@
 
     <main class="container mx-auto">
 
+        <!-- Let's Discuss section -->
+        <section class="mt-16 mb-10 lg:mt-28 lg:mb-16">
+            <div class="flex flex-col items-center gap-5">
+                <p class="text-4xl lg:text-5xl font-bold">Let's Discuss</p>
+                <p class="lg:text-xl">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing
+                    features allow for a streamlined .</p>
+            </div>
+        </section>
+
+        <!-- comments section -->
+        <section id="comment_section" class="flex flex-col lg:flex-row gap-8 hidden">
+
+            <!-- right side comment container -->
+            <div id="comment_container" class="w-full">
+                <!-- comment card implement by javaScript -->
+            </div>
+
+            <!-- left divition container -->
+            <div id="title_container" class="p-10 bg-comment_background rounded-3xl">
+                <div class="flex w-96 justify-between mb-5">
+                    <div>
+                        <p class="text-2xl font-bold">Title</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div>
+                            <i class="fa-solid fa-check-double fa-xl" style="color: #10B981;"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl">Mark as read (<span id="comment_count">0</span>)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More card implement by javaScript -->
+            </div>
+        </section>
 
     </main>
 
     <footer>
         
-
     </footer>
 
     <script src="script/index.js"></script>
