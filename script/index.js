@@ -21,6 +21,17 @@ async function postApi() {
     displayLatestPost(data)
 }
 
+// Search Api
+const searchApi = async (search) => {
+    const url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const posts = data.posts;
+    setTimeout(() => {
+        displayComment(posts);
+        commentSection.classList.remove("hidden")
+    }, 1000)
+}
 
 // plus a number function
 function plusNumber(elementId) {
@@ -31,6 +42,14 @@ function plusNumber(elementId) {
     element.innerText = setValue;
 }
 
+// Search function
+const searchButton = () => {
+    commentSection.classList.add("hidden")
+    loading(true)
+    const searchValue = document.getElementById("search_value")
+    const text = searchValue.value;
+    searchApi(text);
+}
 
 // loading spinner function
 function loading(isTrue) {
