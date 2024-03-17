@@ -12,6 +12,16 @@ const onLoadApi = async () => {
         commentSection.classList.remove("hidden")
     }, 1000)
 }
+
+// latest post Api
+async function postApi() {
+    const url = `https://openapi.programming-hero.com/api/retro-forum/latest-posts`;
+    const res = await fetch(url);
+    const data = await res.json();
+    displayLatestPost(data)
+}
+
+
 // plus a number function
 function plusNumber(elementId) {
     const element = document.getElementById(elementId);
@@ -123,5 +133,44 @@ function showTitle(title, view) {
     titleContainer.appendChild(div);
 }
 
+// Display latest post 
+const displayLatestPost = (latestPost) => {
+
+    const latestPostContainer = document.getElementById("latest_post_container");
+
+    for (const post of latestPost) {
+
+        const div = document.createElement("div");
+        div.classList = "card bg-base-100 shadow-xl"
+        div.innerHTML = `
+            <figure class="px-10 pt-10">
+            <img src="${post.cover_image}" alt="Profile"
+                class="rounded-xl" />
+            </figure>
+            <div class="card-body">
+                <div class="flex gap-3">
+                    <div><i class="fa-regular fa-calendar fa-lg"></i></div>
+                    <p>${post.author?.posted_date || "No publish date"}</p>
+                </div>
+                <h2 class="card-title font-bold mt-3">${post.title}</h2>
+                <p class="my-2">${post.description}</p>
+                <div class="flex gap-4 mt-3">
+                    <div class="btn btn-circle">
+                        <img class="rounded-full" src="${post.profile_image}" alt="Profile">
+                    </div>
+                    <div>
+                        <p class="text-black font-bold">${post.author?.name}</p>
+                        <p>${post.author?.designation ? post.author?.designation : "Unknown"}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        latestPostContainer.appendChild(div)
+    }
+
+}
+
 
 onLoadApi()
+postApi()
